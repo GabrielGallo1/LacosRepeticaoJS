@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 8) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido usando o loop "while". -->
+    <script>
+        // Função para ler um número inteiro do usuário (para fins de demonstração, usando prompt)
+function lerNumero() {
+    const numero = parseInt(prompt("Digite um número inteiro:"));
+    if (isNaN(numero) || numero < 0) {
+        console.log("Por favor, digite um número inteiro não negativo.");
+        return lerNumero();
+    }
+    return numero;
+}
+
+// Lendo o número do usuário
+const numero = lerNumero();
+
+// Inicializando os primeiros dois termos da sequência de Fibonacci
+let termo1 = 0;
+let termo2 = 1;
+
+// Exibindo os termos da sequência de Fibonacci até o número lido
+console.log("Sequência de Fibonacci até o número " + numero + ":");
+
+while (termo1 <= numero) {
+    console.log(termo1);
+    const proximoTermo = termo1 + termo2;
+    termo1 = termo2;
+    termo2 = proximoTermo;
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 40) Faça um programa que exiba os primeiros 20 números da sequência de Fibonacci. -->
+    <script>
+function fibonacci20() {
+    let fibonacci = [0, 1];
+
+    for (let i = 2; i < 20; i++) {
+        fibonacci.push(fibonacci[i - 1] + fibonacci[i - 2]);
+    }
+
+    return fibonacci;
+}
+
+let sequencia = fibonacci20();
+document.write("Os primeiros 20 números da sequência de Fibonacci são:", sequencia.join(', '));
+
+    </script>
+</body>
+</html>

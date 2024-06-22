@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 41) Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido. -->
+    <script>
+function lerNumero() {
+    const readlineSync = require('readline-sync');
+    let numero = readlineSync.questionInt("Digite um número inteiro: ");
+    
+    while (numero < 1) {
+        numero = readlineSync.questionInt("Por favor, digite um número inteiro positivo maior ou igual a 1: ");
+    }
+    
+    return numero;
+}
+
+function somaNumerosParesAte(numero) {
+    let soma = 0;
+
+    for (let i = 2; i <= numero; i += 2) {
+        soma += i;
+    }
+
+    return soma;
+}
+
+let numero = lerNumero();
+
+let somaPares = somaNumerosParesAte(numero);
+document.write("A soma dos números pares entre 1 e", numero, "é:", somaPares);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4) Faça um programa que leia 5 números inteiros usando o loop "while" e exiba a média aritmética dos valores lidos. -->
+    <script>
+let soma = 0;
+let contador = 0;
+const totalNumeros = 5;
+
+function lerNumero() {
+    const numero = parseInt(prompt("Digite um número inteiro:"));
+    return numero;
+}
+
+
+while (contador < totalNumeros) {
+    const numero = lerNumero();
+    if (!isNaN(numero)) {
+        soma += numero;
+        contador++;
+    } else {
+        alert.log("Por favor, digite um número inteiro válido.");
+        lerNumero();
+    }
+}
+
+const media = soma / totalNumeros;
+
+document.write("A média aritmética dos valores lidos é:", media);
+
+    </script>
+</body>
+</html>

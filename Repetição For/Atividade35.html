@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 35) Escreva um programa que leia um número inteiro e exiba a tabuada desse número até o décimo valor. -->
+    <script>
+function lerNumero() {
+    const readlineSync = require('readline-sync');
+    let numero = readlineSync.questionInt("Digite um número inteiro: ");
+    return numero;
+}
+
+function exibirTabuada(numero) {
+    console.log(`Tabuada de ${numero}:`);
+    for (let i = 1; i <= 10; i++) {
+        document.write(`${numero} x ${i} = ${numero * i}`);
+    }
+}
+
+let numero = lerNumero();
+
+exibirTabuada(numero);
+
+    </script>
+</body>
+</html>

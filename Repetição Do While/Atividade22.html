@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 22) Faça um programa que leia um número inteiro e exiba se ele é um número primo usando o loop "do-while". -->
+    <script>
+function solicitarEntrada(mensagem) {
+    return prompt(mensagem);
+}
+
+let numero = parseInt(solicitarEntrada("Digite um número inteiro: "), 10);
+
+if (numero > 1) {
+    let divisor = 2;
+    let ehPrimo = true;
+
+    do {
+        if (numero % divisor === 0) {
+            ehPrimo = false;
+            break; 
+        }
+        divisor += 1;
+    } while (divisor <= Math.sqrt(numero));
+
+    if (ehPrimo) {
+        document.write(`${numero} é um número primo.`);
+    } else {
+        document.write(`${numero} não é um número primo.`);
+    }
+} else {
+    document.write("O número fornecido não é um número inteiro válido para verificar se é primo.");
+}
+
+    </script>
+</body>
+</html>

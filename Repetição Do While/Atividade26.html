@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 26) Escreva um programa que leia um número inteiro e exiba a soma de todos os números pares entre 1 e o número lido usando o loop "do-while". -->
+    <script>
+function lerNumero() {
+    const readlineSync = require('readline-sync');
+    let numero = readlineSync.questionInt("Digite um número inteiro: ");
+    return numero;
+}
+
+function somaPares(numero) {
+    let soma = 0;
+    let i = 1;
+    
+    do {
+        if (i % 2 === 0) {
+            soma += i;
+        }
+        i++;
+    } while (i <= numero);
+
+    return soma;
+}
+
+let numero = lerNumero();
+
+let soma = somaPares(numero);
+
+document.write(`A soma de todos os números pares entre 1 e ${numero} é: ${soma}`);
+
+    </script>
+</body>
+</html>

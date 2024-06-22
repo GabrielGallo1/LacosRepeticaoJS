@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 13)Faça um programa que leia um número inteiro e exiba os seus dígitos separadamente usando o loop "while". -->
+    <script>
+function solicitarEntrada(mensagem) {
+    return prompt(mensagem);
+}
+
+let numero = solicitarEntrada("Digite um número inteiro: ");
+
+let isNegative = false;
+if (numero[0] === '-') {
+    isNegative = true;
+    numero = numero.slice(1);
+}
+
+let contador = 0;
+
+document.write("Os dígitos do número são:");
+
+while (contador < numero.length) {
+    document.write(numero[contador]);
+    contador += 1;
+}
+
+if (isNegative) {
+    document.write("(O número é negativo)");
+}
+
+    </script>
+</body>
+</html>

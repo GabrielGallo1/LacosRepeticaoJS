@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 6) Crie um programa que leia um número inteiro positivo e exiba todos os divisores desse número usando o loop "while". -->
+    <script>
+function lerNumero() {
+    const numero = parseInt(prompt("Digite um número inteiro positivo:"));
+    if (isNaN(numero) || numero <= 0) {
+        document.write("Por favor, digite um número inteiro positivo.");
+        return lerNumero();
+    }
+    return numero;
+}
+
+const numero = lerNumero();
+
+let divisor = 1;
+
+document.write("Os divisores do número " + numero + " são:");
+
+while (divisor <= numero) {
+    if (numero % divisor === 0) {
+        document.write(",",divisor);
+    }
+    divisor++;
+}
+
+    </script>
+</body>
+</html>

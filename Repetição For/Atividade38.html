@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 38) Escreva um programa que leia um número inteiro e exiba a sequência de Fibonacci até o número lido. -->
+    <script>
+function lerNumero() {
+    const readlineSync = require('readline-sync');
+    let numero = readlineSync.questionInt("Digite um número inteiro: ");
+    
+    while (numero < 0) {
+        numero = readlineSync.questionInt("Por favor, digite um número inteiro positivo: ");
+    }
+    
+    return numero;
+}
+
+function fibonacciAteNumero(numero) {
+    let fibonacci = [0, 1];
+
+    for (let i = 2; fibonacci[i - 1] <= numero; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+
+    if (fibonacci[fibonacci.length - 1] > numero) {
+        fibonacci.pop();
+    }
+
+    return fibonacci;
+}
+
+let numero = lerNumero();
+
+let sequencia = fibonacciAteNumero(numero);
+document.write("A sequência de Fibonacci até", numero, "é:", sequencia.join(', '));
+
+    </script>
+</body>
+</html>
